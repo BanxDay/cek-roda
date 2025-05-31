@@ -4,6 +4,8 @@ plugins {
     id("kotlin-kapt")
     alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
+    id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -82,6 +84,8 @@ dependencies {
     implementation(libs.koin.viewmodel)
 
     implementation(libs.firebase.crashlytics)
+    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
