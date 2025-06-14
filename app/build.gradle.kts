@@ -55,6 +55,10 @@ android {
 }
 
 dependencies {
+    implementation(libs.firebase.crashlytics)
+    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -83,10 +87,7 @@ dependencies {
     implementation(libs.koin.navigation)
     implementation(libs.koin.viewmodel)
 
-    implementation(libs.firebase.crashlytics)
-    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
-    implementation("com.google.firebase:firebase-analytics")
-
+   
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
