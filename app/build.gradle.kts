@@ -5,7 +5,6 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
     id("com.android.application")
-    id("com.google.gms.google-services")
 }
 
 android {
